@@ -23,10 +23,8 @@ export default {
   mounted() {
     window.addEventListener("scroll", () => {
       var $slider = document.getElementsByClassName("banner")[0];
-
       var yPos = window.pageYOffset / $slider.dataset.speed;
-      var coords = "center " + yPos + "px";
-
+      var coords = `center calc(50% + ${yPos}px)`;
       $slider.style.backgroundPosition = coords;
     });
   }
@@ -45,7 +43,7 @@ export default {
     ),
     url("https://blog.radware.com/wp-content/uploads/2019/10/machinelearning.jpg");
   background-size: cover;
-  background-position: center;
+  background-position: center 50%;
   display: flex;
   align-items: center;
   transform: translateZ(-1);
