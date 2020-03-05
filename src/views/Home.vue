@@ -3,7 +3,7 @@
     <h1 class="banner__title">AI Research</h1>
     <p
       class="banner__description"
-    >Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur, quaerat inventore autem illum eos ipsam, architecto odio vitae ipsa, provident tempore exercitationem maiores. Culpa consequatur ipsa saepe voluptates quam ad.</p>
+    >Juntos ipsum dolor sit amet consectetur, adipisicing elit. Pariatur, quaerat inventore autem illum eos ipsam, architecto odio vitae ipsa, provident tempore exercitationem maiores. Culpa consequatur ipsa saepe voluptates quam ad.</p>
     <router-link to="/about" class="button button--border">Conócenos</router-link>
   </Banner>
 </template>

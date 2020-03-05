@@ -45,7 +45,6 @@ export default {
 
 <style lang="scss" scoped>
 .banner {
-  margin-top: -56px;
   display: flex;
   align-items: center;
   .banner__content {

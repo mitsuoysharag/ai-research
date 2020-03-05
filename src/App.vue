@@ -1,7 +1,7 @@
 <template>
   <div>
     <Header />
-    <main>
+    <main class="main">
       <router-view />
     </main>
     <Footer />
@@ -21,4 +21,7 @@ export default {
 </script>
 
 <style lang="scss">
+.main {
+  margin-top: 60px;
+}
 </style>

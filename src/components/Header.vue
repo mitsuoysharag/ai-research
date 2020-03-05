@@ -9,13 +9,13 @@
       </button>
       <nav class="nav" :class="{ 'nav--active': nav_active }">
         <ul class="nav__links">
-          <li class="nav__link">
+          <li class="nav__link" @click="nav_active = false">
             <router-link to="/" class="button button--underline">Inicio</router-link>
           </li>
-          <li class="nav__link">
+          <li class="nav__link" @click="nav_active = false">
             <router-link to="/about" class="button button--underline">Nosotros</router-link>
           </li>
-          <li class="nav__link">
+          <li class="nav__link" @click="nav_active = false">
             <router-link to="/about" class="button button--underline">Soluciones</router-link>
           </li>
         </ul>
@@ -27,14 +27,19 @@
 <script>
 export default {
   data: () => ({
-    nav_active: true
+    nav_active: false
   })
 };
 </script>
 
 <style lang='scss' scoped>
 .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
   background: #000;
+  z-index: 1;
   &__content {
     padding: 10px;
     display: flex;
@@ -42,8 +47,8 @@ export default {
   }
 }
 .nav-icon {
+  z-index: 1;
   display: none;
-  z-index: 2;
 }
 .nav {
   display: flex;
@@ -68,7 +73,6 @@ export default {
     bottom: 0;
     right: 0;
     width: 0;
-    z-index: 1;
     transition: all 0.5s;
 
     &__links {
