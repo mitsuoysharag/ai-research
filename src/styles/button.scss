@@ -1,9 +1,23 @@
+$hover-color: #29abe2;
+
 .button {
   padding: 6px 10px;
   color: #fff;
-  border: 1px solid #ccc;
+  font-size: 1.2rem;
   text-decoration: none;
-  &:hover {
-    
+  transition: all 0.2s;
+
+  &--underline {
+    &:hover {
+      color: $hover-color;
+      text-decoration: underline;
+    }
+  }
+  &--border {
+    border: 1px #fff solid;
+    &:hover {
+      background: #fff;
+      color: #000;
+    }
   }
 }
