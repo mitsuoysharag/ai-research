@@ -3,7 +3,7 @@
     <div class="container">
       <div class="row">
         <div class="col-md-6">
-          <section class="banner__body">
+          <section class="banner__content">
             <slot></slot>
           </section>
         </div>
@@ -45,11 +45,10 @@ export default {
 
 <style lang="scss" scoped>
 .banner {
-  $self: &;
   margin-top: -56px;
   display: flex;
   align-items: center;
-  .banner__body {
+  .banner__content {
     color: #fff;
   }
 }

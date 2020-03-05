@@ -5,7 +5,7 @@
     </Banner>
     <section class="wrapp-about-us container">
       <div class="row">
-        <section class="col-md-6">
+        <section class="wrapp-about-us__content col-md-6">
           <h2 class="wrapp-about-us__title">Somos una ...</h2>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed illum illo voluptate, hic numquam laudantium quam deserunt necessitatibus quo incidunt id veniam, sapiente a aspernatur iusto.</p>
           <p>Sed illum illo voluptate, hic numquam laudantium quam deserunt necessitatibus quo incidunt id veniam, sapiente a aspernatur iusto. Autem, sapiente nulla. Tempore!</p>
@@ -43,10 +43,14 @@ export default {
   font-size: 2rem;
 }
 .wrapp-about-us {
+  $self: &;
   margin: 60px auto;
   color: $font-color;
-  &__title {
-    font-size: 1.5rem;
+  &__content {
+    margin-bottom: 20px;
+    #{$self}__title {
+      font-size: 1.5rem;
+    }
   }
   &__image {
     width: 100%;

@@ -1,10 +1,13 @@
 <template>
   <header class="header">
-    <div class="header__body container">
+    <div class="header__content container">
       <router-link to="/">
         <img src="@/assets/img/logo.png" alt="AIResearch" width="180px" />
       </router-link>
-      <nav class="nav">
+      <button class="nav-icon button" @click="nav_active = !nav_active">
+        <i class="fa fa-bars"></i>
+      </button>
+      <nav class="nav" :class="{ 'nav--active': nav_active }">
         <ul class="nav__links">
           <li class="nav__link">
             <router-link to="/" class="button button--underline">Inicio</router-link>
@@ -21,14 +24,26 @@
   </header>
 </template>
 
+<script>
+export default {
+  data: () => ({
+    nav_active: true
+  })
+};
+</script>
+
 <style lang='scss' scoped>
 .header {
   background: #000;
-  &__body {
+  &__content {
     padding: 10px;
     display: flex;
     justify-content: space-between;
   }
+}
+.nav-icon {
+  display: none;
+  z-index: 2;
 }
 .nav {
   display: flex;
@@ -43,8 +58,32 @@
 }
 
 @media (max-width: 576px) {
+  .nav-icon {
+    display: initial;
+  }
   .nav {
-    display: none;
+    $self: &;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 0;
+    z-index: 1;
+    transition: all 0.5s;
+
+    &__links {
+      width: 100%;
+      padding: 0;
+      flex-direction: column;
+      #{$self}__link {
+        margin: 20px auto;
+      }
+    }
+
+    &--active {
+      width: 100%;
+      background: #000000f5;
+    }
   }
 }
 </style>

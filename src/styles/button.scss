@@ -2,10 +2,16 @@ $hover-color: #29abe2;
 
 .button {
   padding: 6px 10px;
+  background: #00000000;
   color: #fff;
+  border: none;
   font-size: 1.2rem;
   text-decoration: none;
   transition: all 0.2s;
+  &:focus {
+    cursor: pointer;
+    outline:0;
+  }
 
   &--underline {
     &:hover {
