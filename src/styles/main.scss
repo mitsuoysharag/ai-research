@@ -14,3 +14,25 @@ body {
 h1, ul {
   margin: 0;
 }
+
+/****** Font Size ******/
+@media (max-width: 1200px) { // Medium devices (tablets, 768px and up)
+  html {
+    font-size: 100%
+  }
+}
+@media (max-width: 992px) { // Medium devices (tablets, 768px and up)
+  html {
+    font-size: 91%
+  }
+}
+@media (max-width: 768px) { // Medium devices (tablets, 768px and up)
+  html {
+    font-size: 83%
+  }
+}
+@media (max-width: 576px) { // Small devices (landscape phones, 576px and up)
+  html {
+    font-size: 75%
+  }
+}

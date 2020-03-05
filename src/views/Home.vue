@@ -1,6 +1,6 @@
 <template>
   <div>
-    <section class="banner">
+    <section class="banner" data-speed="3">
       <div class="container">
         <div class="row">
           <div class="col-md-6">
@@ -19,7 +19,18 @@
 </template>
 
 <script>
-export default {};
+export default {
+  mounted() {
+    window.addEventListener("scroll", () => {
+      var $slider = document.getElementsByClassName("banner")[0];
+
+      var yPos = window.pageYOffset / $slider.dataset.speed;
+      var coords = "center " + yPos + "px";
+
+      $slider.style.backgroundPosition = coords;
+    });
+  }
+};
 </script>
 
 <style lang="scss" scoped>
@@ -37,6 +48,7 @@ export default {};
   background-position: center;
   display: flex;
   align-items: center;
+  transform: translateZ(-1);
 
   &__body {
     color: #fff;
