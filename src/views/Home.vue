@@ -1,5 +1,5 @@
 <template>
-  <Banner :image="image" height="100vh">
+  <Banner :image="image" height="100vh" positionY="50%">
     <h1 class="banner__title">AI Research</h1>
     <p
       class="banner__description"

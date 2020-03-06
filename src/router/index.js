@@ -15,6 +15,11 @@ const routes = [
     path: '/about',
     name: 'about',
     component: () => import('../views/About.vue')
+  },
+  {
+    path: '/services',
+    name: 'services',
+    component: () => import('../views/Services.vue')
   }
 ]
 
@@ -22,6 +27,11 @@ const router = new VueRouter({
   // mode: 'history',
   base: process.env.BASE_URL,
   routes
+})
+
+router.beforeEach((to, from, next) => {
+  window.scrollTo(0, 0)
+  next()
 })
 
 export default router

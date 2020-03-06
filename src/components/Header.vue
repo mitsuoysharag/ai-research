@@ -16,7 +16,7 @@
             <router-link to="/about" class="button button--underline">Nosotros</router-link>
           </li>
           <li class="nav__link" @click="nav_active = false">
-            <router-link to="/about" class="button button--underline">Soluciones</router-link>
+            <router-link to="/services" class="button button--underline">Servicios</router-link>
           </li>
         </ul>
       </nav>

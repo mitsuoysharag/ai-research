@@ -14,10 +14,9 @@
 
 <script>
 export default {
-  props: ["image", "height"],
+  props: ["image", "height", "positionY"],
   data: () => ({
-    speed: 3,
-    positionY: "20%"
+    speed: 3
   }),
   computed: {
     style() {
