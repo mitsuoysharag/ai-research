@@ -22,7 +22,7 @@ export default {
   computed: {
     style() {
       return {
-        height: this.height,
+        height: `calc(${this.height} - 61.5px)`,
         background:
           "linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(41, 55, 150, 0.5) 100%), url(" +
           this.image +
@@ -33,12 +33,17 @@ export default {
     }
   },
   mounted() {
-    var banner = document.getElementById("banner");
-    window.addEventListener("scroll", () => {
-      var yPos = window.pageYOffset / this.speed;
-      var coords = `center calc(${this.positionY} + ${yPos}px)`;
-      banner.style.backgroundPosition = coords;
-    });
+    let isMobile = window.matchMedia("only screen and (max-width: 768px)")
+      .matches;
+
+    if (!isMobile) {
+      var banner = document.getElementById("banner");
+      window.addEventListener("scroll", () => {
+        var yPos = window.pageYOffset / this.speed;
+        var coords = `center calc(${this.positionY} + ${yPos}px)`;
+        banner.style.backgroundPosition = coords;
+      });
+    }
   }
 };
 </script>
