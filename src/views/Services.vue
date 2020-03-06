@@ -49,7 +49,7 @@ import ShowInViewport from "@/components/ShowInViewport";
 export default {
   data: () => ({
     image:
-      "https://blog.wearedrew.co/hs-fs/hubfs/994256_NpAdvHover.jpg?width=1024&name=994256_NpAdvHover.jpg"
+      "https://adnews.mx/wp-content/uploads/2019/06/brazos-hombres-cerrando-trato-escritorio.jpg"
   }),
   components: {
     Banner,
