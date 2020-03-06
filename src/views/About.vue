@@ -7,7 +7,7 @@
       <section class="wrapp-about-us container">
         <div class="row">
           <section class="wrapp-about-us__content col-md-6">
-            <h2 class="wrapp-about-us__title">Somos una ...</h2>
+            <h2 class="wrapp-about-us__title">Título</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed illum illo voluptate, hic numquam laudantium quam deserunt necessitatibus quo incidunt id veniam, sapiente a aspernatur iusto.</p>
             <p>Sed illum illo voluptate, hic numquam laudantium quam deserunt necessitatibus quo incidunt id veniam, sapiente a aspernatur iusto. Autem, sapiente nulla. Tempore!</p>
           </section>
@@ -58,6 +58,7 @@ export default {
   }
   &__image {
     width: 100%;
+    border-radius: 16px;
   }
 }
 </style>
