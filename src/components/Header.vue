@@ -86,7 +86,7 @@ export default {
 
     &--active {
       width: 100%;
-      background: #000000f5;
+      background: #000000ed;
     }
   }
 }
