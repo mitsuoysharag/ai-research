@@ -15,8 +15,8 @@ export default {
   },
   methods: {
     isInViewport(element) {
-      var bounding = element.getBoundingClientRect();
-      return (bounding.top + bounding.bottom) / 2 < window.innerHeight;
+      var { top, bottom } = element.getBoundingClientRect();
+      return top + (bottom - top) / 3 < window.innerHeight;
     },
     show(element) {
       if (this.isInViewport(element)) {
